@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Wildlife Hub</title>
+</head>
+
+<body>
+    <nav class="fixed top-0 w-full bg-green-800 text-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center space-x-2">
+                    <img src="animals-r.png" alt="Animals Logo" class="h-23 w-auto object-contain" />
+                    <span class="text-4xl font-bold hidden sm:inline">Wildlife Hub</span>
+                </div>
+
+                <!-- Toggle Button (Mobile) -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Navigation Links (Desktop) -->
+                <ul class="hidden md:flex space-x-6 text-lg font-medium">
+                    <li><a href="#" class="hover:text-green-300 transition duration-300">Home</a></li>
+                    <li><a href="#" class="hover:text-green-300 transition duration-300">About</a></li>
+                    <li><a href="#" class="hover:text-green-300 transition duration-300">Facts</a></li>
+                    <li><a href="#" class="hover:text-green-300 transition duration-300">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-green-900 px-4 py-4 space-y-2">
+            <a href="#" class="block text-white hover:text-green-300 transition">Home</a>
+            <a href="#" class="block text-white hover:text-green-300 transition">About</a>
+            <a href="#" class="block text-white hover:text-green-300 transition">Facts</a>
+            <a href="#" class="block text-white hover:text-green-300 transition">Contact</a>
+        </div>
+    </nav>
+    <section
+        class="relative min-h-screen w-full overflow-hidden flex items-center justify-center text-center px-4 sm:px-8 md:px-16 lg:px-24 py-12">
+
+        <!-- Responsive Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="wild.jpg" alt="Wildlife Background" class="w-full h-full object-cover brightness-50" />
+        </div>
+
+        <!-- Pyramid Text Content -->
+        <div class="relative z-10 flex flex-col justify-center items-center w-full max-w-4xl mt-16 px-4 text-center top-30">
+            <h1
+                class="text-white text-xl sm:text-2xl md:text-3xl lg:text-7xl font-extrabold leading-tight drop-shadow-lg mb-2">
+                Step Into the <span class="text-amber-500">Wild</span> :
+            </h1>
+            <h1
+                class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight drop-shadow-lg mb-2">
+                Where Every Creature
+            </h1>
+            <h1
+                class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold leading-tight drop-shadow-lg mb-6">
+                Has a Story
+            </h1>
+
+            <!-- Button -->
+            <div class="w-full sm:w-auto">
+                <button
+                    class="w-full sm:w-auto px-6 py-3 text-white font-semibold rounded-lg bg-green-500/20 backdrop-blur-md hover:bg-green-500/40 transition duration-300 cursor-pointer">
+                    Discover More
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="max-w-7xl mx-auto pt-20">
+        <h1 class="text-5xl font-extrabold text-green-700">Explore <span class="text-amber-500">Animals</span> by Group
+        </h1>
+        <p class="mt-2 text-gray-600 max-w-2xl text-xl">Browse mammals, birds, reptiles, amphibians, invertebrates and
+            fish
+            — filter quickly and read short facts for each species.</p>
+    </div>
+
+
+
+    <section id="animal-grid" class="max-w-7xl mx-auto px-4 py-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-10"
+        aria-live="polite">
+
+
+        <!-- Card: Lion -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="h-56 overflow-hidden">
+                <img src="lion-2.jpg" alt="Lion"
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6">
+                <h3 class="text-2xl font-bold text-green-700">Lion</h3>
+                <p class="mt-2 text-gray-600 text-sm">Social cats living in prides. Powerful hunters with
+                    complex social structure.</p>
+                <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                    <span class="px-3 py-1 rounded-full bg-green-100 text-green-800 font-medium">Mammal</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 font-medium">Savannah</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card: Clownfish -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="h-56 overflow-hidden">
+                <img src="clownfish.jpg" alt="Clownfish"
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6">
+                <h3 class="text-2xl font-bold text-cyan-700">Clownfish</h3>
+                <p class="mt-2 text-gray-600 text-sm">Small reef fish that often lives within sea anemones — bright
+                    colors and social behavior.</p>
+                <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                    <span class="px-3 py-1 rounded-full bg-cyan-100 text-cyan-800 font-medium">Fish</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 font-medium">Coral Reef</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card: Penguin -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="h-56 overflow-hidden">
+                <img src="pinguin.jpg" alt="Penguin"
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6">
+                <h3 class="text-2xl font-bold text-blue-700">Penguin</h3>
+                <p class="mt-2 text-gray-600 text-sm">Flightless bird adapted to swimming — often found in cold coastal
+                    regions and islands.</p>
+                <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                    <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 font-medium">Bird</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 font-medium">Coastal</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Card: Gila Monster -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="h-56 overflow-hidden">
+                <img src="gila-monster.jpg" alt="Gila Monster"
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6">
+                <h3 class="text-2xl font-bold text-red-600">Gila Monster</h3>
+                <p class="mt-2 text-gray-600 text-sm">
+                    A venomous lizard native to the southwestern US and Mexico — slow-moving and stout-bodied.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                    <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 font-medium">Reptile</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 font-medium">Desert</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card: Frog -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="h-56 overflow-hidden">
+                <img src="frog.jpg" alt="Frog"
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6">
+                <h3 class="text-2xl font-bold text-purple-700">Frog</h3>
+                <p class="mt-2 text-gray-600 text-sm">
+                    Amphibian — typically lives both in water (as tadpole) and on land (as adult). Moist skin and
+                    powerful legs.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                    <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 font-medium">Amphibian</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 font-medium">Wetlands</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card: Octopus -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="h-56 overflow-hidden">
+                <img src="octopus.jpg" alt="Octopus"
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="p-6">
+                <h3 class="text-2xl font-bold text-yellow-600">Octopus</h3>
+                <p class="mt-2 text-gray-600 text-sm">
+                    Intelligent invertebrate with eight arms and excellent problem-solving skills.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2 text-xs">
+                    <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 font-medium">Invertebrate</span>
+                    <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-700 font-medium">Ocean</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="facts" class="py-20 px-6 bg-gray-50 mt-20">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="text-4xl font-extrabold text-green-500 mb-4">Fun Animal <span class="text-amber-500">Facts</span></h3>
+            <p class="text-gray-500 text-lg">Discover surprising traits and behaviors from the animal kingdom</p>
+        </div>
+
+        <div class="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto">
+
+            <!-- Card: Dolphins -->
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 text-center">
+                <h4 class="text-2xl font-semibold mb-2">🐬 Dolphins</h4>
+                <p class="text-gray-600 text-sm">
+                    Dolphins sleep with one eye open to stay alert for predators while resting.
+                </p>
+            </div>
+
+            <!-- Card: Owls -->
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 text-center">
+                <h4 class="text-2xl font-semibold mb-2">🦉 Owls</h4>
+                <p class="text-gray-600 text-sm">
+                    An owl can rotate its head up to 270 degrees without moving its body!
+                </p>
+            </div>
+
+            <!-- Card: Turtles -->
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 text-center">
+                <h4 class="text-2xl font-semibold mb-2">🐢 Turtles</h4>
+                <p class="text-gray-600 text-sm">
+                    Sea turtles can live up to 100 years and travel thousands of miles in their lifetime.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-green-900 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 md:grid-cols-3">
+
+            <!-- About Section -->
+            <div class="text-center md:text-left">
+                <h4 class="text-xl font-bold mb-3">🌿 About Us</h4>
+                <p class="text-sm text-gray-200 max-w-md mx-auto md:mx-0">
+                    We celebrate the beauty and diversity of the animal kingdom. Our mission is to educate, inspire, and
+                    protect wildlife through engaging content and community action.
+                </p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="text-center md:text-left">
+                <h4 class="text-xl font-bold mb-3">🐾 Explore</h4>
+                <ul class="space-y-2 text-sm text-gray-200">
+                    <li><a href="#" class="hover:text-green-300 transition">About</a></li>
+                    <li><a href="#" class="hover:text-green-300 transition">Habitats</a></li>
+                    <li><a href="#" class="hover:text-green-300 transition">Animal Facts</a></li>
+                </ul>
+            </div>
+
+            <!-- Social & Contact -->
+            <div class="text-center md:text-left">
+                <h4 class="text-xl font-bold mb-3">📣 Connect</h4>
+                <div
+                    class="flex flex-col sm:flex-row sm:justify-center md:justify-start sm:gap-4 space-y-2 sm:space-y-0">
+                    <a href="#" class="hover:text-green-300 transition">🐦 Twitter</a>
+                    <a href="#" class="hover:text-green-300 transition">📘 Facebook</a>
+                    <a href="#" class="hover:text-green-300 transition">📸 Instagram</a>
+                </div>
+                <p class="mt-4 text-sm text-gray-200">Email: hello@wildlifehub.org</p>
+            </div>
+        </div>
+
+        <!-- Attribution -->
+        <div class="mt-10 text-center px-4">
+            <p class="text-sm sm:text-base text-gray-300">
+                Photos used with permission from <a href="https://unsplash.com/"
+                    class="text-green-400 hover:underline">Unsplash.com</a>
+            </p>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="mt-6 border-t border-green-700 pt-4 text-center text-sm text-gray-400 px-4">
+            © 2025 Wildlife Hub. All rights reserved.
+        </div>
+    </footer>
+
+
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
